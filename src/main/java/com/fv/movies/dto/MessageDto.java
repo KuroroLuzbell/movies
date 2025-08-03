@@ -9,10 +9,10 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @XmlRootElement
 @RegisterForReflection
-
-public class MessageDto <T> implements Serializable {
+public class MessageDto<T> implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -27,4 +27,5 @@ public class MessageDto <T> implements Serializable {
     public void setMessage(BaseExceptionDto status) {
         this.status = status;
     }
+
 }

@@ -1,21 +1,26 @@
 package com.fv.movies.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Data
-@Builder
+@Entity
+@Table(name = "gender", schema = "action")
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Gender {
 
-    public Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
 
-    public String description;
+    @Column(name = "description", nullable = false)
+    private String description;
 
-    public LocalDateTime createAt;
+    @Column(name = "createdat", nullable = false)
+    private LocalDateTime createAt;
 }

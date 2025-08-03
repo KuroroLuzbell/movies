@@ -14,17 +14,17 @@ import org.jboss.logmanager.Logger;
 
 @ApplicationScoped
 @Default
-public class LogClientServiceImp implements ILogClientService {
+public class LogClientServiceImpl implements ILogClientService {
 
     @ConfigProperty(name = "log.service",defaultValue = "")
     String strUlrServiceLog;
 
-    Logger objLogger  = Logger.getLogger(LogClientServiceImp.class.getName());
+    Logger objLogger  = Logger.getLogger(LogClientServiceImpl.class.getName());
 
     final IRestClientService objRestClientService;
 
     @Inject
-    public LogClientServiceImp(IRestClientService objRestClientService) {
+    public LogClientServiceImpl(IRestClientService objRestClientService) {
         this.objRestClientService = objRestClientService;
     }
 

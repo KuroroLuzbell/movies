@@ -6,11 +6,13 @@ import java.io.Serializable;
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @XmlRootElement
 @RegisterForReflection
 @Data
-
 public class BaseExceptionDto implements Serializable {
 
     @Serial

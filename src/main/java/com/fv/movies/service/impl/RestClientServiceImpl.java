@@ -12,18 +12,18 @@ import org.jboss.logging.Logger;
 import io.vertx.mutiny.ext.web.client.WebClient;
 
 @ApplicationScoped
-public class RestClientServiceImp implements IRestClientService {
+public class RestClientServiceImpl implements IRestClientService {
 
     private final WebClient objWebClient;
 
-    Logger objLogger = Logger.getLogger(RestClientServiceImp.class.getName());
+    Logger objLogger = Logger.getLogger(RestClientServiceImpl.class.getName());
 
     @Inject
-    public RestClientServiceImp(Vertx vertx) {
+    public RestClientServiceImpl(Vertx vertx) {
         this.objWebClient = WebClient.create(vertx);
     }
 
-    public RestClientServiceImp(WebClient webClient) {
+    public RestClientServiceImpl(WebClient webClient) {
         this.objWebClient = webClient;
     }
     @Override
